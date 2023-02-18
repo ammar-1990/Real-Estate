@@ -30,16 +30,16 @@ opacity={'0.7'}
 
 <Box
 display={'flex'}
-flexDirection={{base:'column',sm:'row'}}
+flexDirection={{base:'column',md:'row'}}
 alignItems='center'
-justifyContent={{base:'flex-start',sm:'space-between'}}
+justifyContent={{base:'flex-start',md:'space-between'}}
 position='absolute'
 inset='0'
 padding='1.5rem'
 
 >
 <Box
-width={{base:'100%',sm:'50%'}}
+width={{base:'100%',md:'50%'}}
 marginBottom='2rem'>
   <Text
 color='white'
@@ -49,11 +49,13 @@ lineHeight='shorter'
   Download Our New<strong>Property Buiyng Guide</strong>  Today...
 
 </Text>
+
+<Text color='white' marginTop={'2rem'} fontSize={{base:'lg',md:'xl'}}>a free PDF with out best secrets for evaluating a property purchase,calculatin profit and so much more.</Text>
 </Box>
 
 
 <Box
-width={{base:'100%',sm:'50%'}}>
+width={{base:'100%',md:'50%'}}>
 
   <HomeForm />
   </Box>
