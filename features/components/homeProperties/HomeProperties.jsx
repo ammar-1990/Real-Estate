@@ -4,6 +4,7 @@ import { Autoplay,Pagination } from "swiper"
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
+import PropertyCard from "./PropertyCard"
 
 
 const HomeProperties = ({properties}) => {
@@ -32,7 +33,7 @@ pagination={{dynamicBullets:true}}
 modules={[Autoplay,Pagination]}
 className='mySwiper'
 >
-
+{properties.map((property)=>(<SwiperSlide key={property.id}><PropertyCard {...property} /></SwiperSlide>))}
 
 </Swiper>
 
