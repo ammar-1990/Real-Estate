@@ -3,6 +3,7 @@ import Footer from "@/features/components/footer/Footer";
 import Layout from "@/features/components/layout/Layout";
 import HomeBanner from "@/features/components/home/HomeBanner";
 import HomeProperties from "@/features/components/homeProperties/HomeProperties";
+import MeatTheTeam from "@/features/components/MeatTheTeam/MeatTheTeam";
 
 export default function Home({properties}) {
   console.log(properties)
@@ -10,6 +11,7 @@ export default function Home({properties}) {
  <Layout >
 <HomeBanner />
 <HomeProperties properties={properties} />
+<MeatTheTeam />
   </Layout>
   )
 }
@@ -19,6 +21,6 @@ export default function Home({properties}) {
 export async function getStaticProps(){
   const {hits}=require('@/features/data/properties')
   return {
-    props: {properties:hits}
+    props: {properties:hits.slice(0,5)}
   }
 }
