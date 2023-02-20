@@ -4,6 +4,7 @@ import Layout from "@/features/components/layout/Layout";
 import HomeBanner from "@/features/components/home/HomeBanner";
 import HomeProperties from "@/features/components/homeProperties/HomeProperties";
 import MeatTheTeam from "@/features/components/MeatTheTeam/MeatTheTeam";
+import Partners from "@/features/components/partners/Partners";
 
 export default function Home({properties}) {
   console.log(properties)
@@ -12,6 +13,7 @@ export default function Home({properties}) {
 <HomeBanner />
 <HomeProperties properties={properties} />
 <MeatTheTeam />
+<Partners />
   </Layout>
   )
 }

@@ -1,0 +1,1 @@
+export const imgs=['partners/image1.jpeg','partners/image2.jpeg','partners/image3.jpeg','partners/image4.jpeg']
