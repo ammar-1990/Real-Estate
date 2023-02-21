@@ -13,6 +13,8 @@ const HomeBanner = () => {
     backgroundAttachment={'fixed'}
     backgroundSize='cover'
     position={'relative'}
+    display='flex'
+    alignItems={'center'}
 
     
     
@@ -33,9 +35,9 @@ display={'flex'}
 flexDirection={{base:'column',md:'row'}}
 alignItems='center'
 justifyContent={{base:'flex-start',md:'space-between'}}
-position='absolute'
-inset='0'
+zIndex='10'
 padding='1.5rem'
+position={'relative'}
 
 >
 <Box
