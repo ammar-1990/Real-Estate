@@ -3,6 +3,7 @@ import useCleanProperty from "@/features/hooks/useCleanProperty"
 import Layout from "@/features/components/layout/Layout"
 import {BiLocationPlus} from 'react-icons/bi'
 import SingleSlider from "@/features/components/singleSlider/SingleSlider"
+import PropertyStats from "@/features/components/propertyStats/PropertyStats"
 
 const Single=({property})=>{
 
@@ -33,14 +34,21 @@ const Single=({property})=>{
 fontSize={{base:'sm', md:"2xl"}}
 fontWeight='medium'
 color='blue.800'>{propertyType}  {title}</Text>
- <Flex color="blue.500" gap='1rem' alignItems={'center'}>
+ <Flex color="blue.500" gap='1rem' alignItems={'center'}
+ marginBottom='3rem'>
     <BiLocationPlus />
     <Text color='blue.500' fontSize={{base:'sm', md:"lg"}}>  {address} - ID {externalID}</Text>
 <Badge colorScheme={'green'}>{purpose}</Badge>
  </Flex>
+ <Box display={'flex'}
+ flexDirection={{base:'column',md:'row'}}
+ gap='1rem'>
+<Box width={{base:'100%',md:'50%'}}>
+<SingleSlider photos={photos}/>
 
- <SingleSlider photos={photos}/>
-
+</Box>
+ <Box width={{base:'100%',md:'50%'}}><PropertyStats rooms={rooms} baths={baths} price={price} sqSize={sqSize} /></Box>
+</Box>
 
         </Box>
         </Layout>
