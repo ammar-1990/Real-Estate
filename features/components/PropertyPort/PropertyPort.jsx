@@ -1,8 +1,6 @@
 import { Box, Text } from "@chakra-ui/react"
 
-
-const PropertyVideo = ({coverVideo}) => {
-   
+const PropertyPort = ({panorama}) => {
   return (
     <Box 
     padding='0.8rem'
@@ -13,13 +11,13 @@ const PropertyVideo = ({coverVideo}) => {
     
 
     >
-      <Text
-      textAlign={'center'}>Walkthrough Video</Text>
+        <Text
+        textAlign={'center'}>3D Walkthrought Video</Text>
 <iframe
 width='100%'
 height='92%'
-allow="accelerometer;autoplay;clipboard-write ; encrypted-media;gyroscope;picture-in-picture"
-src={`http://www.youtube.com/embed/${coverVideo}`}
+
+src={`${panorama}`}
 >
 
 </iframe>
@@ -28,4 +26,4 @@ src={`http://www.youtube.com/embed/${coverVideo}`}
   )
 }
 
-export default PropertyVideo
+export default PropertyPort

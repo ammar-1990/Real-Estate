@@ -6,6 +6,7 @@ import SingleSlider from "@/features/components/singleSlider/SingleSlider"
 import PropertyStats from "@/features/components/propertyStats/PropertyStats"
 import TextContent from "@/features/components/textContent/TextContent"
 import PropertyVideo from "@/features/components/PropertyVideo/PropertyVideo"
+import PropertyPort from "@/features/components/PropertyPort/PropertyPort"
 
 const Single=({property})=>{
 
@@ -29,7 +30,7 @@ const Single=({property})=>{
     return(
         <Layout>
         <Box backgroundColor={'#f7f8f9'}
-        padding='3rem'>
+        padding={{base:'0.5rem',md:'3rem'}}>
 
            
 <Text 
@@ -59,7 +60,17 @@ color='blue.800'>{propertyType}  {title}</Text>
  </Box>
 
 </Box>
-<PropertyVideo coverVideo={coverVideo} />
+<Flex flexDirection={{base:'column',lg:'row'}}
+gap='1rem'
+marginTop='4rem'
+alignItems={'center'}>
+  
+        <PropertyVideo coverVideo={coverVideo}  />
+    
+
+<PropertyPort panorama={panorama} />
+
+</Flex>
 
         </Box>
         </Layout>
