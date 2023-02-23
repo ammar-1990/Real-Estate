@@ -8,7 +8,7 @@ const TextContent = ({children,title}) => {
     </Text>
     <Divider marginY='1rem' />
 
-    <Box color='gray.500' noOfLines={'4'}>{children}</Box>
+    <Box color='gray.500'>{children}</Box>
  </Box>
   )
 }

@@ -6,8 +6,8 @@ export const navLinks=[
         link:'/properties'
     },
     {
-        title:'Content',
-        link:'/content'
+        title:'Contact',
+        link:'/contact'
     },
     {
         title:'(555) 000 555',

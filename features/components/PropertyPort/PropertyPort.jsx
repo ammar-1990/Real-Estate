@@ -6,16 +6,18 @@ const PropertyPort = ({panorama}) => {
     padding='0.8rem'
     backgroundColor={'white'}
     width={{base:'100%',lg:'50%'}}
-    height={{base:'200px',sm:'275px',md:'350px'}}
+    height={{base:'350px',sm:'375px',md:'375px'}}
    
     
 
     >
         <Text
-        textAlign={'center'}>3D Walkthrought Video</Text>
+      
+        paddingY='1rem'
+        color='gray.600'>3D Walkthrought Video</Text>
 <iframe
 width='100%'
-height='92%'
+height='85%'
 
 src={`${panorama}`}
 >
