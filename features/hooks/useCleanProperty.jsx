@@ -17,7 +17,7 @@ const description =property.description
 const coverVideoUrl=property.coverVideo.url
 const coverVideo=coverVideoUrl.slice(coverVideoUrl.length-11)
 const panorama=property.panoramas?.length? property.panoramas[0].url:[]
-const amenitites=property.amenitites?.flatMap(({amenitites})=>amenitites).map(item=>item.text)
+const amenities=property.amenities?.flatMap(({amenities})=>amenities).map(item=>item.text)
 const furnished=property.furnishingStatus
  return {
     address,
@@ -34,7 +34,7 @@ const furnished=property.furnishingStatus
     description,
     coverVideo,
     panorama,
-    amenitites,
+    amenities,
     furnished
   }
 }

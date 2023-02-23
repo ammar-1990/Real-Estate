@@ -1,9 +1,11 @@
-import { Badge, Box, Flex, Text } from "@chakra-ui/react"
+import { Badge, Box, Divider, Flex, SimpleGrid, Text } from "@chakra-ui/react"
 import useCleanProperty from "@/features/hooks/useCleanProperty"
 import Layout from "@/features/components/layout/Layout"
 import {BiLocationPlus} from 'react-icons/bi'
 import SingleSlider from "@/features/components/singleSlider/SingleSlider"
 import PropertyStats from "@/features/components/propertyStats/PropertyStats"
+import TextContent from "@/features/components/textContent/TextContent"
+import PropertyVideo from "@/features/components/PropertyVideo/PropertyVideo"
 
 const Single=({property})=>{
 
@@ -21,7 +23,7 @@ const Single=({property})=>{
         description,
         coverVideo,
         panorama,
-        amenitites,
+        amenities,
         furnished}=useCleanProperty(property)
 
     return(
@@ -47,8 +49,17 @@ color='blue.800'>{propertyType}  {title}</Text>
 <SingleSlider photos={photos}/>
 
 </Box>
- <Box width={{base:'100%',md:'50%'}}><PropertyStats rooms={rooms} baths={baths} price={price} sqSize={sqSize} /></Box>
+ <Box width={{base:'100%',md:'50%'}}><PropertyStats rooms={rooms} baths={baths} price={price} sqSize={sqSize} />
+ <TextContent title='Description' >{description}</TextContent>
+ <TextContent title="Amenities">
+    <SimpleGrid columns={{base:'1',sm:'2'}} color='gray.500'>
+    {amenities.length ? amenities.map((ele ,index)=><Text key={index}>{ele}</Text>) : 'Please contact us'}
+    </SimpleGrid>
+ </TextContent>
+ </Box>
+
 </Box>
+<PropertyVideo coverVideo={coverVideo} />
 
         </Box>
         </Layout>
