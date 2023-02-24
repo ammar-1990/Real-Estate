@@ -84,8 +84,8 @@ export default Single
 export async function getServerSideProps(context){
 
     const {Single}= context.query
-    const property= await getSingle(Single)
-    // const property =require('@/features/data/property')
+    // const property= await getSingle(Single)
+    const property =require('@/features/data/property')
 
     return {
         props:{property}
