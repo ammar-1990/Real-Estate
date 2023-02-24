@@ -7,7 +7,7 @@ const Properties = ({properties})=> {
 
     return (
         <Layout >
-        <Box padding='3rem'
+        <Box padding={{base:'0.5rem',md:'3rem'}}
         backgroundColor={'#f7f8f9'}>
 <SimpleGrid
 

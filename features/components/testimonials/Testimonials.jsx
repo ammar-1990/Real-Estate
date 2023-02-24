@@ -8,7 +8,7 @@ const Testimonials = () => {
   return (
     <Box
     backgroundColor={'blue.50'}
-    padding={{base:'3rem',sm:'6rem'}}
+    padding={{base:'0.7rem',sm:'6rem'}}
 
 
     >
