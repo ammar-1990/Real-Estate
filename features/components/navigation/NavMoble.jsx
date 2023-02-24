@@ -9,7 +9,7 @@ const NavMoble = () => {
     <Flex 
     color={'blue.600'}
     padding={"2rem"}
-   
+ 
     backgroundColor={'white'}
     margin={'0 auto'}
     justifyContent={'space-between'}
@@ -25,7 +25,7 @@ const NavMoble = () => {
     <Box display={'flex'} gap={'3rem'} alignItems='center'>
         <Menu>
             <MenuButton as={IconButton} aria-label='options' icon={<RxHamburgerMenu />} variant='outline'/>
-            <MenuList>
+            <MenuList zIndex={'50'}>
             {
         navLinks.map((el)=><MenuItem key={el.title}> <Link  href={el.link}><Flex alignItems={"center"} gap={'0.4rem'}> {el.icon} {el.title}</Flex></Link></MenuItem>)
 }
