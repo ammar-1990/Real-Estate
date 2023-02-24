@@ -29,6 +29,6 @@ export async function getStaticProps(){
 
   // const properties= await getProperty(5)
   return {
-    props: {properties:hits.slice(0,5)}
+    props: {properties:hits.slice(0,6)}
   }
 }

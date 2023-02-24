@@ -1,7 +1,7 @@
 import { useEffect,useState } from "react"
 
 const useIsDesktop = () => {
-    const [isDesktop,setIsDesktop]=useState(null)
+    const [isDesktop,setIsDesktop]=useState(3)
     useEffect(()=> {
 const size=()=>{ 
 
