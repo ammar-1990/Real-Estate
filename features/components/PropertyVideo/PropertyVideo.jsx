@@ -20,7 +20,7 @@ const PropertyVideo = ({coverVideo}) => {
 width='100%'
 height='85%'
 allow="accelerometer;autoplay;clipboard-write ; encrypted-media;gyroscope;picture-in-picture"
-src={`http://www.youtube.com/embed/${coverVideo}`}
+src={`https://www.youtube.com/embed/${coverVideo}`}
 >
 
 </iframe>
