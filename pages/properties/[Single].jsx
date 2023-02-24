@@ -7,6 +7,7 @@ import PropertyStats from "@/features/components/propertyStats/PropertyStats"
 import TextContent from "@/features/components/textContent/TextContent"
 import PropertyVideo from "@/features/components/PropertyVideo/PropertyVideo"
 import PropertyPort from "@/features/components/PropertyPort/PropertyPort"
+import { getSingle } from "@/lib/axios"
 
 const Single=({property})=>{
 
@@ -81,7 +82,10 @@ export default Single
 
 
 export async function getServerSideProps(context){
-    const property =require('@/features/data/property')
+
+    const {Single}= context.query
+    const property= await getSingle(Single)
+    // const property =require('@/features/data/property')
 
     return {
         props:{property}

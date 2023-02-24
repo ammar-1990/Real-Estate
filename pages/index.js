@@ -6,9 +6,10 @@ import HomeProperties from "@/features/components/homeProperties/HomeProperties"
 import MeatTheTeam from "@/features/components/MeatTheTeam/MeatTheTeam";
 import Partners from "@/features/components/partners/Partners";
 import Testimonials from "@/features/components/testimonials/Testimonials";
+import { getProperty } from "@/lib/axios";
 
 export default function Home({properties}) {
-  console.log(properties)
+  
   return (
  <Layout >
 <HomeBanner />
@@ -24,6 +25,9 @@ export default function Home({properties}) {
 
 export async function getStaticProps(){
   const {hits}=require('@/features/data/properties')
+
+
+  // const properties= await getProperty(5)
   return {
     props: {properties:hits.slice(0,5)}
   }
